@@ -72,6 +72,7 @@ function isSpForm() {
             $(spButton).click();
             return false
         });
+        console.log('foo isSpForm done')
     } else { setTimeout(isSpForm, 2000) }
 }
 isSpForm();
