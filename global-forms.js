@@ -25,10 +25,12 @@ var Webflow = Webflow || []
 Webflow.push(() => {
     initAnimations()
         .then(() => {
+            console.log('lotties initialised');
             $('[data-lottie^=lottie-form]').each(function(index, el) {
                 let attr = $(this).attr('data-lottie');
                 animations[index].name = attr;
                 lottie.stop(attr);
+                console.log(animations[index].name);
             });
         })
         .catch((error) => {
