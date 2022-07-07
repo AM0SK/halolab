@@ -25,7 +25,7 @@ var Webflow = Webflow || []
 Webflow.push(() => {
     initAnimations()
         .then(() => {
-            $('.lottie-check').each(function(index, el) {
+            $('[data-lottie^=lottie-form]').each(function(index, el) {
                 let attr = $(this).attr('data-lottie');
                 animations[index].name = attr;
                 lottie.stop(attr);
